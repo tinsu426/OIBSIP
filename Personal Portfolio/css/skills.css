@@ -1,0 +1,230 @@
+/* === skills-style.css === */
+/* Root Variables (matching contact.css) */
+:root {
+  --bg-color: #0f172a;
+  --card-bg: #1e293b;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent-color: #38bdf8;
+  --accent-hover: #0ea5e9;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  line-height: 1.6;
+  padding-top: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header & Navigation (exactly like contact page) */
+header {
+  padding: 20px 0;
+  border-bottom: 1px solid #334155;
+}
+
+.nav-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-link a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link a:hover,
+.nav-link a.active {
+  color: var(--accent-color);
+}
+
+.social-link i {
+  font-size: 1.2rem;
+}
+
+/* Main Section (hero style from contact page) */
+.main {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.hero-text {
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+}
+
+.subtitle {
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-top: 10px;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.description {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Skills Grid (cards styled like contact cards) */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin: 40px 0 30px;
+}
+
+.skill-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  border: 1px solid #334155;
+  padding: 30px 24px;
+  text-align: left;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-color);
+}
+
+.card-icon {
+  font-size: 2.2rem;
+  color: var(--accent-color);
+  margin-bottom: 16px;
+}
+
+.skill-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
+.skill-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.skill-tags li {
+  background: rgba(56, 189, 248, 0.12);
+  color: var(--accent-color);
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  transition: background 0.2s ease;
+}
+
+.skill-tags li:hover {
+  background: rgba(56, 189, 248, 0.2);
+}
+
+/* Skills Note (like direct-conversation style) */
+.skills-note {
+  max-width: 600px;
+  margin: 40px auto 0;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  border: 1px solid #334155;
+  padding: 30px 40px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.skills-note p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+}
+
+.skills-note i {
+  color: var(--accent-color);
+  margin-right: 10px;
+}
+
+/* Responsive (same as contact page) */
+@media (max-width: 768px) {
+  .nav-link {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-card {
+    text-align: center;
+  }
+
+  .skill-tags {
+    justify-content: center;
+  }
+
+  .card-icon {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-note {
+    padding: 20px;
+  }
+}
