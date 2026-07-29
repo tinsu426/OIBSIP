@@ -1,0 +1,122 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TempConvert | Professional Temperature Tool</title>
+<link rel="stylesheet" href="./css/index.css">
+<script src="./js/index.js" defer></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="script.js"></script>
+<link
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+  rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <nav class="nav-container">
+      <div class="brand-logo">TempConvert</div>
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="converter.html" >Converter</a>
+    
+      </div>
+      <div class="nav-icon">
+        <span class="material-symbols-outlined">thermostat</span>
+      </div>
+    </nav>
+  </header>
+<section class="heade">
+  <h1>Fast &amp; Accurate <br> Temperature Converter</h1>
+  <p>
+    Experience seamless conversion between Celsius, Fahrenheit,<br> and Kelvin.
+    Designed for precision, crafted for speed.
+  </p>
+</section>
+
+<!-- Main Conversion Section -->
+<section>
+  <div class="forms">
+    <!-- Illustration -->
+    <div>
+      <div>
+        <span data-icon="thermostat"></span>
+      </div>
+    </div>
+
+    <!-- Converter Logic Form -->
+    <div class="formunit">
+      <!-- Input Area -->
+      <div class="Inputarea">
+        <label for="temp-input">Enter Temperature</label>
+        <div>
+          <input id="temp-input" placeholder="0.00" type="number" />
+          <p id="error" class="error"></p>
+        </div>
+      </div>
+
+      <!-- Unit Selector -->
+      <div class="UnitSelector">
+        <span>From Unit</span>
+        <div id="unit-selector">
+          <button onclick="selectUnit(this)">Celsius</button>
+          <button onclick="selectUnit(this)">Fahrenheit</button>
+          <button onclick="selectUnit(this)">Kelvin</button>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="actions">
+        <button onclick="conversion()">Convert Now</button>
+        <button onclick="resetForm()">Reset</button>
+      </div>
+
+      <!-- Results Area -->
+      
+    </div>
+  </div>
+</section>
+
+<!-- Utility Features Bento Grid -->
+<section class="Utility-Features">
+  <div class="Utility-Feature"  >
+    <div >
+      <span data-icon="bolt"></span>
+    </div>
+    <div>
+      <h3>Instant Results</h3>
+      <p>Real-time calculations as you type.</p>
+    </div>
+  </div>
+
+  <div class="Utility-Feature">
+    <div>
+      <span data-icon="shield"></span>
+    </div>
+    <div>
+      <h3>Privacy First</h3>
+      <p>Conversions happen locally on your device.</p>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="footer-container">
+    <div class="footer-info">
+      <span class="footer-logo">TempConvert</span>
+      <span class="footer-text">
+        © 2024 TempConvert. Precise, distraction-free conversions.
+      </span>
+    </div>
+
+    <nav class="footer-nav">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+
+
+</body>
+</html>

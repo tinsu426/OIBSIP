@@ -1,0 +1,118 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TempConvert | Professional Temperature Tool</title>
+<link rel="stylesheet" href="./css/converter.css">
+<script src="./js/index.js" defer></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="script.js"></script>
+<link
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+  rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <nav class="nav-container">
+      <div class="brand-logo">TempConvert</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="converter.html" class="active">Converter</a>
+      </div>
+      <div class="nav-icon">
+        <span class="material-symbols-outlined">thermostat</span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-container">
+    <div class="header-section">
+      <h1>Results</h1>
+      <p>Precise conversion for your measurement.</p>
+    </div>
+
+    <!-- Success Result Card -->
+    <section class="result-card">
+      
+      <!-- Summary Header -->
+      <div class="card-summary">
+        <div class="status">
+          <span class="material-symbols-outlined icon-fill">check_circle</span>
+          <span>Conversion successful!</span>
+        </div>
+        
+      </div>
+
+      <!-- Bento Grid Results -->
+      <div class="results-grid">
+        <!-- Celsius Card -->
+        <div class="unit-card">
+          <span class="unit-label">Celsius</span>
+          <div class="result">
+<p id="Celsius"></p>
+</div>
+        </div>
+
+        <!-- Fahrenheit Card (Highlighted) -->
+        <div class="unit-card highlighted">
+          <span class="unit-label">Fahrenheit</span>
+          
+          <div class="result">
+<p id="Fahrenheit"></p>
+</div>
+        </div>
+
+        <!-- Kelvin Card -->
+        <div class="unit-card">
+          <span class="unit-label">Kelvin</span>
+           <div class="result">
+<p id="Kelvin"></p>
+</div>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="card-actions">
+        <button class="btn btn-primary" onclick="convertAgain()">
+          <span class="material-symbols-outlined">refresh</span>
+          Convert Again
+        </button>
+        
+      </div>
+
+    </section>
+  </main>
+
+
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-info">
+      <span class="footer-logo">TempConvert</span>
+      <span class="footer-text">
+        © 2024 TempConvert. Precise, distraction-free conversions.
+      </span>
+    </div>
+
+    <nav class="footer-nav">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Contact</a>
+    </nav>
+  </div>
+</footer>
+<script>
+const celsius = localStorage.getItem("celsius");
+const fahrenheit = localStorage.getItem("fahrenheit");
+const kelvin = localStorage.getItem("kelvin");
+
+document.getElementById("Celsius").textContent = celsius + " °C";
+document.getElementById("Fahrenheit").textContent = fahrenheit + " °F";
+document.getElementById("Kelvin").textContent = kelvin + " K";
+</script>
+
+
+</body>
+</html>
